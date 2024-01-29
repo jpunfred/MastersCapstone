@@ -1,0 +1,8 @@
+import sqlite3
+print("Grabbing Data")
+db_name = "chinook.db"
+with sqlite3.connect(db_name) as conn:
+    sql_command = "SELECT NAME, COMPOSER, UNITPRICE FROM tracks INNER JOIN playlist_track ON tracks.TrackId = playlist_track.TrackId WHERE PlaylistId = 12"
+    cursor = conn.execute(sql_command)
+    for row in cursor:
+        print(f"Title: {row[0]}. Composer: {row[1]}. Unit Price: {row[2]}.")

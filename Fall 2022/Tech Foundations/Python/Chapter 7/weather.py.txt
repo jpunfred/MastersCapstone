@@ -1,0 +1,14 @@
+
+# Follow the instructions for coding a weather app
+import statistics
+daily_high_temps = [62, 64,79, 52, 46, 50, 58, 66, 71, 77, 78, 78, 76, 79, 77]
+daily_low_temps = [42, 48,47, 24, 28, 28, 32, 37, 43, 46, 48, 47, 48, 49, 50]
+daily_humidity = [0.48, 0.53, 0.46, 0.44, 0.4, 0.6, 0.58, 0.5, 0.48, 0.43, 0.41, 0.39, 0.39, 0.38, 0.4]
+Max_High = max(daily_high_temps)
+Avg_High = statistics.mean(daily_high_temps)
+Min_Low = min(daily_low_temps)
+Avg_Low = statistics.mean(daily_low_temps)
+Avg_Humidity = statistics.mean(daily_humidity)
+print(f"Weather forecast for the next 15 days: The average high will be {Avg_High:.0f} and the average low will be {Avg_Low:.0f}. The highest temperature will be {Max_High:.0f}. The lowest temperature will be {Min_Low:.0f}. The average humidity will be {Avg_Humidity:.2f}.")
+
+#statistics function was found on https://careerkarma.com/blog/python-average/

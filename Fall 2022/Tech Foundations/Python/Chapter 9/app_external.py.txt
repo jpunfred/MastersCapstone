@@ -1,0 +1,6 @@
+import subprocess
+
+#run a command in the terminal
+#ls -l means list files and folders with details
+#ls - uses lowercase L, NOT 1 (one)
+subprocess.run(["ls", "-l"])

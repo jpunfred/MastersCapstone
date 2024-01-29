@@ -1,0 +1,17 @@
+from pathlib import Path
+import sqlite3
+import csv
+import json
+print("Read all of the content from a CSV file")
+with open("customers.csv") as file:
+    reader = csv.reader(file)
+    data = tuple(reader)
+    print(data)
+
+    db_name = "chinook.db"
+    with sqlite3.connect(db_name) as conn:
+        sql_command = "INSERT INTO customers(Company, FirstName, LastName, Address, City, PostalCode, Country, Email) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"
+        for data in data:
+            conn.execute(sql_command, data)
+        conn.commit()
+        print("Data written to database")

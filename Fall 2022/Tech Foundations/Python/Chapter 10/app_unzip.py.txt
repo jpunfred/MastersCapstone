@@ -1,0 +1,12 @@
+from pathlib import Path
+from zipfile import ZipFile
+
+path = Path("worldbank_zipfiles")
+paths = [p for p in path.iterdir()]
+
+target_directory = "worldbank_data"
+for file in paths:
+    with ZipFile(file) as zip:
+        zip.extractall(target_directory)
+    print('{0} {1}'.format("Done extracting", file.name))
+    

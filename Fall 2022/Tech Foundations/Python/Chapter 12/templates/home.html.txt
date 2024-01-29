@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h1>PyShop</h1>
+<h4>Buy the highest quality food online delivered to your home.</h4>
+<a class="navbar-brand" href="products"> Products</a>
+<a class="navbar-brand" href="products/new"> New</a>
+<a class="navbar-brand" href="admin"> Admin Login</a>
+{% endblock %} 

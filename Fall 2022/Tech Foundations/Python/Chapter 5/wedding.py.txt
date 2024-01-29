@@ -1,0 +1,18 @@
+# Follow the instructions for how to code this application
+# Jordan Unfred
+from functools import total_ordering
+
+invitation_list = []
+keep_adding = True
+while keep_adding:
+    guest_invitation = input("Enter a guest's name or type 'end' to stop:\n")
+    if guest_invitation.lower() == "end":
+        keep_adding = False
+    else:
+        invitation_list.append(guest_invitation)
+count_guests = 0
+for x in invitation_list:
+    count_guests += 1
+    print(x)
+total_cost = count_guests * 12
+print(f"You have invited {count_guests} guests at a cost of ${total_cost:.2f}.")
