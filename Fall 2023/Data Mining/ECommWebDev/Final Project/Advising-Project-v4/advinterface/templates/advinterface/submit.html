@@ -1,0 +1,70 @@
+<!-- advinterface/templates/advinterface/submit.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2C0000;
+            background-image: url('path/to/your/texture/pattern.png');  /* Replace with the actual path to your texture image */
+            background-repeat: repeat;
+            color: #F8F8FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #content {
+            text-align: center;
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #F8F8FF;
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #FFFF00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #45a049;
+        }
+
+        #admin-link {
+            color: #FFFF00;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #admin-link:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h2>Submission Successful</h2>
+        <p>Your classes have been submitted successfully.</p>
+        <p><a href="{% url 'profile_creation' %}">Go back to Class Selection</a></p>
+        <p id="admin-link">...or go to <a href="{% url 'admin:index' %}" target="_blank">Django Admin</a></p>
+    </div>
+</body>
+</html>
